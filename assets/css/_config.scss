@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "calluna-regular";
+    src: url(../fonts/Calluna-Light.otf);
+}
+
+@font-face {
+    font-family: "FOT-Klee-Pro-M";
+    src: url(../fonts/FOT-Klee-Pro-M.otf);
+}
+
+@font-face {
+    font-family: "FOT-Klee-Pro-DB";
+    src: url(../fonts/FOT-Klee-Pro-DB.otf);
+}
+
+$font-calluna: "calluna-regular";
+$font-fot-klee: "FOT-Klee-Pro-M";
+$font-fot-klee-db: "FOT-Klee-Pro-DB";
+// $font-fot-klee: fot-klee-pro, sans-serif;
