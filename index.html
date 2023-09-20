@@ -35,6 +35,10 @@
             </a>
         </div>
     </header>
+    <div class='sp_search'>
+        <input type='text' class='c-nav_search_input' placeholder='生産者/商品を探す' />
+        <i class="search fa fa-search" aria-hidden="true"></i>
+    </div>
     <main class="p-container">
         <section class="p-intro">
             <img class='p-intro_img_pc' width='100%' height='auto' src='./assets/image/pc_section_1.png' />
@@ -125,7 +129,6 @@
                 </ul>
             </section>
             <section class='p-section_group'>
-
                 <section class='p-product'>
                     <div class='c_header'>
                         <div class='c_header_logo'>
@@ -211,13 +214,16 @@
                     <div class='p-tick_main'>
                         <div class='p-tick_parent'>
                             <img class='p-tick_img_pc' width='100%' src='./assets/image/Group 987.png' />
-                            <h3 class='p-tick_title'>厳選された全国の畜産生産者から直接商品が届く</h3>
-                            <p class='p-tick_content'>※お支払いは生産者ごとの精算になります</p>
+                            <img class='p-tick_img_sp' width='100%' height='auto' src='./assets/image/tick_sp.png' />
+                            <div class='p-tick_child'>
+                                <h3 class='p-tick_title'>厳選された全国の畜産生産者から<br>直接商品が届く</h3>
+                                <p class='p-tick_content'>※お支払いは生産者ごとの精算になります</p>
+                            </div>
                         </div>
                         <button class='p-tick_button'>
                         チクタグについて
                         </button>
-                        <img class='p-tick_img_sp' width='100%' height='auto' src='./assets/image/sp_tick.png' />
+
                     </div>
                 </section>
                 <section class='p-feature'>
@@ -612,7 +618,7 @@
     </main>
     <footer class='c-footer'>
         <div class='totop'>
-
+            <a href="#">▲ このページの先頭へ</a>
         </div>
         <div class='c-footer_content'>
             <div class='c-footer_content_social'>
@@ -664,7 +670,7 @@
         },
         pagination: {
             el: ".swiper-pagination",
-            clickable: true,
+            clickable: true
         },
         breakpoints: {
             320: {
