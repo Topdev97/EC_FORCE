@@ -271,19 +271,16 @@
         }
     }
 }
-.test{
-    color:black;
-    font-size: 20px;
-}
+
 .p-main {
     margin-top: 64px;
     display: flex;
     justify-content: center;
-    gap:125px
 }
 
 .p-menu {
-    width: 215px;
+    width: 100%;
+    max-width: 200px;
     @include media-sp {
         display: none;
     }
@@ -407,6 +404,10 @@
                 font-weight: 400;
             }
         }
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 
@@ -459,7 +460,6 @@
     @include media-sp {
         margin-top: 55px;
     }
-    &_swipper {
         position: relative;
         .swiper {
             margin-top: 30px;
@@ -472,7 +472,7 @@
                 }
             }
             .swiper-slide {
-                img {
+                &_img {
                     border-color: #707070 !important;
                     border-radius: 10px !important;
                 }
@@ -482,14 +482,17 @@
             }
         }
         @include media-sp {
-            .swiper-button-next,
-            .swiper-button-prev {
+            .swiper-button-next1,
+            .swiper-button-prev1 {
                 display: none;
             }
             .swiper-pagination {
                 display: block;
             }
         }
+    &_des {
+        font-size: 16px;
+        color: #340102;
     }
 }
 
@@ -497,6 +500,38 @@
     margin-top: 98px;
     @include media-sp {
         margin-top: 67px;
+    }
+}
+.p-productor_swiper{
+    position: relative;
+    .swiper {
+        margin-top: 30px;
+        hr {
+            border-top: solid 1px #000000;
+            margin-left: 30rem;
+            margin-right: 120rem;
+            @include media-sp {
+                margin: 0;
+            }
+        }
+        .swiper-slide {
+            img {
+                border-color: #707070 !important;
+                border-radius: 10px !important;
+            }
+        }
+        .swiper-pagination {
+            display: none;
+        }
+    }
+    @include media-sp {
+        .swiper-button-next2,
+        .swiper-button-prev2 {
+            display: none;
+        }
+        .swiper-pagination {
+            display: block;
+        }
     }
 }
 .wagyu_products {
