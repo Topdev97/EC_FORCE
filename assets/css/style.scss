@@ -4,14 +4,8 @@
 @import './l-common';
 @import './swiper';
 @import './c-component';
-.p-container {
-    position: relative;
-    z-index: 100;
-    padding: 0 55px;
-    @include media-sp {
-        padding: 0;
-    }
-}
+
+
 
 .c-nav {
     display: flex;
@@ -43,7 +37,8 @@
     &_search {
         position: relative;
         &_input {
-            width: 472px;
+            max-width: 472px;
+            width: 100%;
             height: 49px;
             padding: 0 17px;
             border-radius: 40px;
@@ -193,6 +188,14 @@
     }
 }
 
+.p-container {
+    position: relative;
+    z-index: 100;
+    padding: 0 55px;
+    @include media-sp {
+        padding: 0;
+    }
+}
 .p-intro {
     &_img_pc {
         @include media-sp {
@@ -276,6 +279,7 @@
     margin-top: 64px;
     display: flex;
     justify-content: center;
+    gap:4%
 }
 
 .p-menu {
@@ -317,8 +321,8 @@
 }
 
 .p-section_group {
-    max-width: 963px;
-    width: 100%;
+    flex: 1;
+    width: 100px;
     @include media-sp {
         width: 100%;
     }
@@ -373,6 +377,7 @@
         line-height: 1.6;
         font-size: 20px;
         font-weight: 600;
+        color: #340102;
         @include media-sp {
             font-size: 13px;
             font-weight: 400;
@@ -412,10 +417,23 @@
 }
 
 .p-tick {
-
     margin-top: 89px;
     @include media-sp {
         margin-top: 67px;
+    }
+    &_main{
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #D00000;
+        margin-top: 15px;
+        @include media-sp {
+            margin-top: 11px;
+        }
+    }
+    &_parent{
+        z-index: 1;
+        position: relative;
     }
     &_img_pc {
         @include media-sp {
@@ -428,11 +446,45 @@
             display: block;
         }
     }
-    &_main{
-        margin-top: 15px;
+    &_title {
+        max-width: 304px;
+        position: absolute;
+        text-align: center;
+        z-index: 3;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 40%;
+        font-size: 22px;
+        font-weight: 400;
+        color: #340102;
+        line-height: 1.5;
         @include media-sp {
-            margin-top: 11px;
+            top:10%;
         }
+    }
+
+    &_content {
+        position: absolute;
+        font-size: 13px;
+        color: #211112;
+        text-align: center;
+        z-index: 3;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @include media-sp {
+            top: 28%;
+        }
+    }
+
+    &_button {
+        margin-top: 22px;
+        margin-bottom: 22px;
+        font-size: 17px;
+        text-align: center;
+        padding: 20px 40px;
+        background-color: white;
+        border-radius: 32px;
     }
 }
 
@@ -460,6 +512,7 @@
     @include media-sp {
         margin-top: 55px;
     }
+    &_swipper{
         position: relative;
         .swiper {
             margin-top: 30px;
@@ -474,7 +527,8 @@
             .swiper-slide {
                 &_img {
                     border-color: #707070 !important;
-                    border-radius: 10px !important;
+                    width: 266px;
+                    height: 201px;
                 }
             }
             .swiper-pagination {
@@ -490,9 +544,12 @@
                 display: block;
             }
         }
+    }
     &_des {
         font-size: 16px;
         color: #340102;
+        margin-top: 8px;
+        padding: 0 5px;
     }
 }
 
@@ -532,6 +589,18 @@
         .swiper-pagination {
             display: block;
         }
+    }
+    .productor_position {
+        margin-top: 17px;
+        margin-left: 10px;
+        font-size: 13px;
+        color: #340102;
+    }
+    .productor_name {
+        margin-top: 17px;
+        margin-left: 10px;
+        font-size: 19px;
+        color: #340102;
     }
 }
 .wagyu_products {

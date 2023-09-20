@@ -332,6 +332,20 @@ body {
   object-fit: cover;
 }
 
+.mySwiper1 .swiper-slide img {
+  display: block;
+  width: 266px;
+  height: 201px;
+  object-fit: cover;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 295px;
+  height: 379px;
+  object-fit: cover;
+}
+
 .swiper-button-next,
 .swiper-button-prev,
 .swiper-button-next1,
@@ -712,17 +726,6 @@ body {
   transition: all 0.35s ease;
 }
 
-.p-container {
-  position: relative;
-  z-index: 100;
-  padding: 0 55px;
-}
-@media screen and (max-width: 767px) {
-  .p-container {
-    padding: 0;
-  }
-}
-
 .c-nav {
   display: flex;
   align-items: center;
@@ -759,7 +762,8 @@ body {
   position: relative;
 }
 .c-nav_search_input {
-  width: 472px;
+  max-width: 472px;
+  width: 100%;
   height: 49px;
   padding: 0 17px;
   border-radius: 40px;
@@ -915,6 +919,17 @@ body {
   }
 }
 
+.p-container {
+  position: relative;
+  z-index: 100;
+  padding: 0 55px;
+}
+@media screen and (max-width: 767px) {
+  .p-container {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .p-intro_img_pc {
     display: none;
@@ -1004,6 +1019,7 @@ body {
   margin-top: 64px;
   display: flex;
   justify-content: center;
+  gap: 4%;
 }
 
 .p-menu {
@@ -1046,8 +1062,8 @@ body {
 }
 
 .p-section_group {
-  max-width: 963px;
-  width: 100%;
+  flex: 1;
+  width: 100px;
 }
 @media screen and (max-width: 767px) {
   .p-section_group {
@@ -1113,6 +1129,7 @@ body {
   line-height: 1.6;
   font-size: 20px;
   font-weight: 600;
+  color: #340102;
 }
 @media screen and (max-width: 767px) {
   .product_recommends_des {
@@ -1164,6 +1181,22 @@ body {
     margin-top: 67px;
   }
 }
+.p-tick_main {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #D00000;
+  margin-top: 15px;
+}
+@media screen and (max-width: 767px) {
+  .p-tick_main {
+    margin-top: 11px;
+  }
+}
+.p-tick_parent {
+  z-index: 1;
+  position: relative;
+}
 @media screen and (max-width: 767px) {
   .p-tick_img_pc {
     display: none;
@@ -1177,13 +1210,47 @@ body {
     display: block;
   }
 }
-.p-tick_main {
-  margin-top: 15px;
+.p-tick_title {
+  max-width: 304px;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 40%;
+  font-size: 22px;
+  font-weight: 400;
+  color: #340102;
+  line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
-  .p-tick_main {
-    margin-top: 11px;
+  .p-tick_title {
+    top: 10%;
   }
+}
+.p-tick_content {
+  position: absolute;
+  font-size: 13px;
+  color: #211112;
+  text-align: center;
+  z-index: 3;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+@media screen and (max-width: 767px) {
+  .p-tick_content {
+    top: 28%;
+  }
+}
+.p-tick_button {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  font-size: 17px;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 32px;
 }
 
 .p-feature {
@@ -1211,45 +1278,50 @@ body {
 
 .p-ranking {
   margin-top: 70px;
-  position: relative;
 }
 @media screen and (max-width: 767px) {
   .p-ranking {
     margin-top: 55px;
   }
 }
-.p-ranking .swiper {
+.p-ranking_swipper {
+  position: relative;
+}
+.p-ranking_swipper .swiper {
   margin-top: 30px;
 }
-.p-ranking .swiper hr {
+.p-ranking_swipper .swiper hr {
   border-top: solid 1px #000000;
   margin-left: 30rem;
   margin-right: 120rem;
 }
 @media screen and (max-width: 767px) {
-  .p-ranking .swiper hr {
+  .p-ranking_swipper .swiper hr {
     margin: 0;
   }
 }
-.p-ranking .swiper .swiper-slide_img {
+.p-ranking_swipper .swiper .swiper-slide_img {
   border-color: #707070 !important;
-  border-radius: 10px !important;
+  width: 266px;
+  height: 201px;
 }
-.p-ranking .swiper .swiper-pagination {
+.p-ranking_swipper .swiper .swiper-pagination {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  .p-ranking .swiper-button-next1,
-  .p-ranking .swiper-button-prev1 {
+  .p-ranking_swipper .swiper-button-next1,
+  .p-ranking_swipper .swiper-button-prev1 {
     display: none;
   }
-  .p-ranking .swiper-pagination {
+  .p-ranking_swipper .swiper-pagination {
     display: block;
   }
 }
 .p-ranking_des {
   font-size: 16px;
   color: #340102;
+  margin-top: 8px;
+  padding: 0 5px;
 }
 
 .p-wagyu {
@@ -1292,6 +1364,18 @@ body {
   .p-productor_swiper .swiper-pagination {
     display: block;
   }
+}
+.p-productor_swiper .productor_position {
+  margin-top: 17px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #340102;
+}
+.p-productor_swiper .productor_name {
+  margin-top: 17px;
+  margin-left: 10px;
+  font-size: 19px;
+  color: #340102;
 }
 
 .wagyu_products {
