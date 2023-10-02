@@ -13,10 +13,12 @@
     padding: 0 55px;
     width: 100%;
     height: 93.5px;
+    border-bottom: 1px solid #DBDBDB;
     justify-content: space-between;
     @include media-sp {
         padding: 0, 10px;
         height: 78px;
+        border-bottom:none;
     }
     &_logo {
         background-image: url('../image/pc_logo.png');
@@ -943,4 +945,90 @@
             margin-top: 36px;
         }
     }
+}
+
+
+//detail page
+
+.p-detail_wrap {
+    max-width: 963px;
+    margin: auto;
+    padding: auto;
+    h2{
+        font-size: 20px;
+        margin-bottom: 13px;
+        font-weight: bold;
+        color: #340102;
+        @include media-is-pc {
+            margin-bottom: 0px;
+        }
+
+    }
+    p{
+        margin-top: 15px;
+        font-size: 14px;
+        color: #340102;
+        line-height: 25px;
+    }
+    h3{
+        font-size: 16px;
+        color: #340102;
+        margin-top: 29px;
+    }
+
+}
+//please change the component
+.p-detail_component {
+    margin-top: 63px;
+    max-width: 492px;
+}
+.p-detail_comment {
+    margin-top: 63px;
+    max-width: 492px;
+    background-color: #FCF4EC;
+    padding: 28px 26px;
+}
+.p-detail_information {
+    margin-top: 48px;
+    max-width: 492px;
+    li{
+        font-size: 14px;
+    }
+    span {
+        font-size: 14px;
+    }
+    ul {
+        list-style: square;
+        margin-top: 30px;
+    }
+    ul:first-child{
+        margin-top: 0;
+    }
+    @include media-is-pc {
+        display: none;
+    }
+}
+
+.p-detail_productor{
+    margin-top: 48px;
+    max-width: 492px;
+    a {
+        font-size: 14px;
+        color: #340102;
+    }
+    &_link {
+        display: flex;
+        max-width: 295px;
+        background-color: #FCF4EC;
+        padding: 15px 22px;
+        border-radius: 5px;
+        justify-content: space-between;
+    }
+    svg {
+        font-size: 14px;
+    }
+    @include media-is-pc {
+        display: none;
+    }
+
 }
